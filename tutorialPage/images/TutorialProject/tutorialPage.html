@@ -1,0 +1,199 @@
+<html>
+<head>
+  <title>Vue Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="./tutorialStyle.css" />
+
+</head>
+<body>
+	<div id="header">
+		
+	</div>
+	<div id="title">
+		<h1>Vue.js 101</h1>
+	</div>
+	<div id="content">
+		<h1>Introduction</h1>
+		<p>Vue is is a progressive framework for building user interfaces. Compared to most inflexible frameworks, Vue was built to be incrementally adoptable. 
+		At its core Vue is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. That is not all, Vue is capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.
+		 In this tutorial, the version of Vue that we are going to use is 2.0; and we are not going to cover <a href="https://cli.vuejs.org/guide/">vue-cli</a> like we did for the project here.</p>
+		</div>
+		</br>
+		</br>
+		<hr />
+		<div id="content">
+			<h1>Getting Started</h1>
+			<p>First, we need an IDE to work on Vue. VisualStudio is fine, but we may need to install a bunch of extensions like code highlighting and snippet tool, etc. to make it fully support Vue. 
+			So I would recommend using <a href="https://atom.io/" target="_blank">Atom editor</a> since everything we need is already included in it.</p>
+			
+			<p>We recommend also installing the <a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank">Vue Devtools</a> in your browser, allowing you to inspect and debug your Vue applications in a more user-friendly interface.</p>
+			</div>
+		<hr />	
+		<div id="content">
+			<h1>First Vue Program</h1>
+			<p>Let's build our first Vue program which is the Vue version of Hello World.
+			First, we want to include Vue in the HTML page just like how we did for this whole semester:</p>
+			<img src="images/1.PNG">
+			<p>Now let's take a look the code</p>
+			<p>HTML:</p>
+			<img src="images/2.PNG">
+			<p>JS:</p>
+			<img src="images/3.PNG">			
+			<p>We can see the HTML part is actually pretty easy, the only thing we added here is the double brackets which is the most basic form of data binding in Vue.
+			 This tag will be replaced with the value of the message property on the corresponding data object. It will also be updated whenever the data object’s message property changes.</p>
+			<p>For the js part, we created a Vue instance then plugged into an element which is #app here. Finally we added our data to the data property inside the instance.</p>
+			<p>Let's play around with what we just learned!</p>
+			
+		</div>
+		
+		
+		<div class="demo">	
+		<p class="codepen" data-height="385" data-theme-id="dark" data-default-tab="html,result" data-user="EthanSHL" data-slug-hash="ZEbOgqm" data-editable="true" data-pen-title="First Vue Project">
+			<span>See the Pen <a href="https://codepen.io/EthanSHL/pen/ZEbOgqm">
+			First Vue Project</a> by ES (<a href="https://codepen.io/EthanSHL">@EthanSHL</a>)
+			on <a href="https://codepen.io">CodePen</a>.</span>
+			</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			</div>
+			<br/>
+			<hr />	
+			
+
+        <div id="content">
+        	<h1>Event Handling</h1>
+        	<p>Not fun enough? Let’s keep going. This time we want to create some buttons that increment and decrement the number of someone’s age. 
+            As you may already know, we need buttons to listen for click events on it, so in Vue, we use v-on directive to do that.</p>
+			<img src="images/4.PNG">
+
+        	<p>For the next step instead of using @click="age++", we want to externalize the code. We can add the code into the methods property on the Vue instance.</p>
+			<img src="images/5.PNG">
+			<p>Okay now we want to add another button that increments 5 years after we click it, how can we do that? 
+            Yes, we can add another method to make it works or actually we got an easier way. We can just add on the parentheses to pass through a parameter to make it works.</p>
+			<p>HTML:</p>
+			<img src="images/6.PNG">
+			<P>JS:</P>
+			<img src="images/7.PNG">
+			<p>Looks like you got these. It is the right time to test yourself!</p>
+        	</div>
+			
+			<div class="demo">	
+			<p class="codepen" data-height="385" data-theme-id="dark" data-default-tab="js,result" data-user="EthanSHL" data-slug-hash="MWajYWO" data-pen-title="Event Handling">
+			  <span>See the Pen <a href="https://codepen.io/EthanSHL/pen/MWajYWO">
+			  Event Handling</a> by ES (<a href="https://codepen.io/EthanSHL">@EthanSHL</a>)
+			  on <a href="https://codepen.io">CodePen</a>.</span>
+			</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			</div>
+
+<div id="content">
+        <h1>Components</h1>
+        <p>Components are reusable blocks of code that work together to create 
+            your vue app. Every component starts with a template, and every 
+            template contains exaclty one root element as seen below (usally
+            a div):
+        </p>
+        <img src="images/template.png" style="width:600px"/>
+        <p>Once you have the template set up, you can add some data under the
+            data property. You will notice that the data property is now a
+            function
+        </p>
+        <img src="images/component.png" style="width:250px"/>
+        <p>Finally, when you want to use the component, simply add the tag
+            wherever you want to use it.
+        </p>
+        <img src="images/example1.png" style="width:250px"/>
+    </div>
+    
+    <br />
+    <br />
+    <hr />
+
+    <div id="content">
+        <h1>Our Application</h1>
+        <p>For our application we decided to make a sports media web page.
+            This application allows you to browse articles from different 
+            sports, post comments and post new articles.
+        </p>
+        <p>
+            The application is made up of many different Vue componenets,
+            but there are a few that give the website its functionality.
+            These are the addArticle, showArticles and singleArticle
+            components.
+        </p>
+        <h2>Add Article</h2>
+        <p>This component allows us to add new articles to the website</p>
+        <img src="images/addArticle.png" style="width:400px" />
+        <p>
+            As you can see the addArticle component has an event that fires
+            when the 'Add Article' button is clicked.
+        </p>
+        <img src="images//addArticleCode.png" style="width:500px" />
+        <p>
+            This method sends the article data to the database so that it
+            appears each time the webpage is opended.
+        </p>
+        <h2>Show Articles</h2>
+        <p>
+            In the showArticles component, articles are shown based on which
+            content section you are on. This is done by grabbing the articles
+            from the database, copying then in an array and returning them 
+            on the webpage.
+        </p>
+        <img src="images/showArticles.png" style="width:400px" />
+        <h2>Single Article</h2>
+        <p>
+            The singleArticle component shows the user the article that they
+            have clicked on. It also uses the addComment component to allow
+            users to add comments underneath the article.
+        </p>
+        <img src="images/singleArticle.png" style="width:400px"/>
+    </div>
+
+    <br />
+    <br />
+    <hr />
+
+    <div id="content">
+        <h1>Conclusion</h1>
+        <p>
+            When working with Vue, you will notice there is a big learning 
+            curve that you must get over before you can begin to create your 
+            web application. In some cases, learning to use this framework was 
+            like learning another coding language. The most challenging part 
+            was learning how the entire application runs from a single div on 
+            an html page. In Vue, you are creating a single page application 
+            that relies on multiple components working together. This can get 
+            confusing because one syntax error in a minor component can result 
+            in the entire application crashing. Looking back, we would 
+            probably take more time to learn the syntax and structure of Vue 
+            so that we could better take advantage of its abilities. On the 
+            other hand we were glad to take advantage of features like 
+            attribute binding, which allows you to dynamically bind and 
+            attribute to an expression. This makes things like event handling 
+            much quicker by reducing the amount of code written. Another 
+            aspect of Vue that we took advantage of is list rendering. While 
+            we were creating our app, we worked with lists and arrays 
+            constantly. With list rendering, you can loop through an array or 
+            list without adding additional javascript (see below):
+        </p>
+        <img src="images/forloop.png" style="800px" />
+        <p>
+            Overall we enjoyed making our application because it taught us a 
+            powerful framework that now gives us the ability to create more 
+            advanced web applications in the future. Although we would not 
+            recommend the framework for beginners, Vue can be a great tool 
+            for intermediate and advanced web developers.
+        </p>
+    </div>
+
+    <br />
+    <br />
+    <hr />
+
+    <div id="content">
+        <h1>References</h1>
+        <p><a href="https://vuejs.org/">vuejs.org</a></p>
+        <p><a href="https://www.vuemastery.com/">Vue Mastery</a></p>
+        <p><a href="https://www.youtube.com/watch?v=Wy9q22isx3U&t=653s">Vue JS Crash Course</a></p>
+    </div>
+</body>
+</html>
