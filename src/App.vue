@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div>
+    <app-header></app-header>
+		<router-view></router-view>
+
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import addArticle from'./components/addArticle.vue';
+  import showArticles from'./components/showArticles.vue';
+  import header from'./components/header.vue';
+  import singleArticle from'./components/singleArticle.vue';
+  import baseball from'./components/baseball.vue';
+  import basketball from'./components/basketball.vue';
+  import football from './components/football.vue';
+  import hockey from './components/hockey.vue';
+  import addComment from './components/addComment.vue'
+ 
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+export default{
+	components:{
+		'add-article':addArticle,
+    'show-articles':showArticles,
+    'app-header':header,
+    'single-article':singleArticle,
+    'baseball-articles':baseball,
+    'basketball-articles':basketball,
+    'football-articles':football,
+    'hockey-articles': hockey,
+    'add-comment': addComment
+	},
+	data(){
+		return{
+
+		}
+  },
+	methods:{
+
+	}
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+	margin:0;
+	font-family:'Nunito SemiBold';
 }
 </style>
